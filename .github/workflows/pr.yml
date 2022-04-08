@@ -21,7 +21,6 @@ on:
         required: false
         type: string
 
-on:
   pull_request:
     types:
       - opened
