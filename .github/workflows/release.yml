@@ -8,7 +8,7 @@ on:
 
 jobs:
   plan:
-    name: Packer Release
+    name: Release
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +27,6 @@ jobs:
 
       - name: Test output
         env:
-          TAG: ${{ steps.push_tag.new_tag }}
+          TAG: ${{ steps.push_tag.outputs.new_tag }}
         run: |
           echo "tag is $TAG"
